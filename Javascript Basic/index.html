@@ -71,6 +71,15 @@
     <h4>Right Shit operator</h4>
     <p id="rightShit"></p>
 
+    <!-- Exponential Notation -->
+    <h4>Exponential Notation</h4>
+    <p id="expo"></p>
+
+    <!-- Bigint -->
+    <h4>Bigint</h4>
+    <p id="bigInt"></p>
+
+
     <script>
         // Display methods
         // document.write(5 + 6);
@@ -152,6 +161,17 @@
         let rightShit = 40;
         rightShit >>= 2;
         document.getElementById("rightShit").innerHTML = "Value of RightShit is: " + rightShit;
+
+        //Exponential Notation
+        let a = 123e5;
+        let b = 123e-5;
+
+        document.getElementById("expo").innerHTML =
+            a + "<br>" + b;
+
+        // Bigint
+        let bigInt = BigInt("123456789012345678901234567890");
+        document.getElementById("bigInt").innerHTML = bigInt; 
     </script>
 </body>
 

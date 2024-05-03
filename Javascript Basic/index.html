@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- javascript basics -->
+
+    <!-- Changing HTML Content -->
+
+    <h2>JavaScript Basics</h2>
+    <p id="demo">Change HTML Content</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML="Welcome!!"'>Click</button>
+    <br><br>
+
+    <!-- Code block -->
+    <h4>Code Block</h4>
+    <p id="demo1"></p>
+    <button type="button" onclick="myFunction()">Click Me</button>
+
+    <!-- Variables -->
+    <h4>Variables using var, let and const</h4>
+    <p id="Var"></p>
+
+    <!-- Operators -->
+    <h4>Operators</h4>
+    <p id="operator"></p>
+
+    <!-- Expressions -->
+    <h4>Expressions</h4>
+    <p id="Expressions"></p>
+
+    <!-- Hoisting -->
+    <h4>Hoisting</h4>
+    <p id="hoist"></p>
+
+    <!-- let hoisting -->
+    <h4>Let hoist</h4>
+    <p id="letHoist"></p>
+
+    <!-- Const Arrays -->
+    <h4>Const Arrays</h4>
+    <p id="constArr"></p>
+
+    <!-- const Objects -->
+    <h4>const Objects</h4>
+    <p id="constObj"></p>
+
+    <!-- Comparison Operators -->
+    <!-- String Comparison -->
+    <h4>String Comparison</h4>
+    <p id="strComp"></p>
+
+    <!-- Incrementing -->
+    <h4>Incrementing</h4>
+    <p id="incr"></p>
+
+    <!-- Decrementing -->
+    <h4>Decrementing</h4>
+    <p id="decr"></p>
+
+    <!-- Left Shit operator -->
+    <h4>Left Shit operator</h4>
+    <p id="leftShit"></p>
+
+    <!-- Right Shit operator -->
+    <h4>Right Shit operator</h4>
+    <p id="rightShit"></p>
+
+    <script>
+        // Display methods
+        // document.write(5 + 6);
+        // alert("Hello!");
+        console.log("In console")
+
+        //Code Block
+        function myFunction() {
+            document.getElementById("demo1").innerHTML = "Hello JavaScript!";
+        }
+
+        //Variables
+        var x = 6;
+        var y = 10;
+
+        var z = x + y;
+
+        let person = "Gokul";
+
+        const pi = 3.14;
+
+        document.getElementById("Var").innerHTML = "Values - " + z + "<br>" + "Let Value - " + person + "<br>" + "Const Value -" + pi;
+
+        //Operators
+        document.getElementById("operator").innerHTML = "Add and Multiple - " + (5 + 6) * 10;
+
+        //strings will be concatenated
+        document.getElementById("Expressions").innerHTML = "John" + " " + "Doe";
+
+        //Hoisting
+        //Var hoisting
+        Value = "Hoisted";
+        document.getElementById("hoist").innerHTML = Value;
+        var Value;
+
+        //Let hoisting
+        try {
+            value = "let hoisting";
+            let value;
+        } catch (err) {
+            document.getElementById("letHoist").innerHTML = err;
+        }
+
+        //const Arrays
+        const cars = ["Toyota", "BMW", "Volvo", "Audi"];
+
+        document.getElementById("constArr").innerHTML = cars;
+
+        //const Objects
+        const car = { type: "Fiat", model: "500", color: "white" };
+
+        document.getElementById("constObj").innerHTML = "Car color is " + car.color;
+
+        //Comparison Operators
+        //String Comparison
+        let text1 = "A";
+        let text2 = "B";
+        let result = text1 < text2;
+        document.getElementById("strComp").innerHTML = "Is A less than B? " + result;
+
+        // Incrementing
+        let incr = 2;
+        incr++;
+        let incrVal = incr;
+        document.getElementById("incr").innerHTML = incrVal;
+
+        // Decrementing
+        let decr = 5;
+        decr--;
+        let decrVal = decr;
+        document.getElementById("decr").innerHTML = decrVal;
+
+        //Left shift operator
+        let leftShit = 10;
+        leftShit <<= 2;
+        document.getElementById("leftShit").innerHTML = "Value of LeftShit is: " + leftShit;
+
+        //Right shift operator
+        let rightShit = 40;
+        rightShit >>= 2;
+        document.getElementById("rightShit").innerHTML = "Value of RightShit is: " + rightShit;
+    </script>
+</body>
+
+</html>

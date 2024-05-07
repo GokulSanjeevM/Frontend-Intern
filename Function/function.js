@@ -47,3 +47,44 @@ user.getName.call(user2, "Shankar");
 
 //apply() method
 user.getName.apply(user2, ["Shankar"]);
+
+//Function Memoization
+const preValues = [];
+
+function sqaure(n) {
+  if (preValues[n] != null) {
+    return preValues[n];
+  }
+  let result = 0;
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+      result += 1;
+    }
+  }
+  preValues[n] = result;
+  return result;
+}
+
+// console.log(sqaure(30));
+// console.log(sqaure(30));
+// console.log(sqaure(30));
+// console.log(sqaure(30));
+// console.log(sqaure(30));
+// console.log(sqaure(30));
+
+//Memoization method
+function fib(n, val = []) {
+  if (val[n] != null) {
+    return val[n];
+  }
+  let result;
+  if (n <= 2) {
+    result = 1;
+  } else {
+    result = fib(n - 1, val) + fib(n - 2, val);
+  }
+  val[n] = result;
+  return result;
+}
+
+console.log(fib(50));
